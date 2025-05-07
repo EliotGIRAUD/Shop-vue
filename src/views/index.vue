@@ -60,7 +60,7 @@ const handleFilter = (category) => {
 
       <div v-else>
         <button @click="ShowProduct" class="refresh-btn">Actualiser</button>
-        <div class="products-grid">
+        <div class="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <Card :products="filteredProducts"/>
         </div>
       </div>
