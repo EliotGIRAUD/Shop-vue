@@ -42,7 +42,9 @@ const cartStore = useCartStore()
                     <span>{{ cartStore.totalPrice.toFixed(2) }} €</span>
                 </div>
                 <button class="checkout-btn">Procéder au paiement</button>
+                <button @click="cartStore.clearCart()" class="clear-cart-btn">Vider le panier</button>
                 <router-link to="/" class="continue-shopping">Continuer mes achats</router-link>
+
             </div>
         </div>
     </div>
@@ -148,5 +150,21 @@ const cartStore = useCartStore()
 
 .checkout-btn:hover {
     background-color: #007a08;
+}
+
+.clear-cart-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.clear-cart-btn:hover {
+    background-color: #cc0000;
 }
 </style> 
